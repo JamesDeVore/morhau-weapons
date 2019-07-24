@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
 const app = express();
+const data = require('./routes/data')
 
 app.use(cors());
 
@@ -13,6 +14,8 @@ app.use(
 );
 
 //routes
+
+app.use('/data', data)
 
 app.use(bodyParser.json());
 
